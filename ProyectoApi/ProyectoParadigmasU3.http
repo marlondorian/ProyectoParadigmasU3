@@ -1,0 +1,6 @@
+@ProyectoParadigmasU3_HostAddress = http://localhost:5217
+
+GET {{ProyectoParadigmasU3_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
