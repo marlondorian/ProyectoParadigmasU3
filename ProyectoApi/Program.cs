@@ -19,15 +19,6 @@ builder.Services.AddControllers();
 
 builder.Services.AddCorsConfiguration(builder.Configuration);
 
-// builder.Services.AddCors(options =>
-// {
-//     options.AddPolicy("AllowVite",
-//         builder => builder
-//             .WithOrigins("http://localhost:5173", "http://localhost:5174")
-//             .AllowAnyMethod()
-//             .AllowAnyHeader());
-// });
-
 var app = builder.Build();
 
 StripeConfiguration.ApiKey = app.Configuration.GetValue<string>("Stripe:SecretKey") ?? "sk_test_placeholder";
