@@ -4,6 +4,7 @@ using ProyectoApi.Services.Checkout;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Stripe;
+using PersonsApp.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,14 +17,16 @@ builder.Services.AddTransient<ICheckoutService, ProyectoApi.Services.Checkout.Ch
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowVite",
-        builder => builder
-            .WithOrigins("http://localhost:5173", "http://localhost:5174")
-            .AllowAnyMethod()
-            .AllowAnyHeader());
-});
+builder.Services.AddCorsConfiguration(builder.Configuration);
+
+// builder.Services.AddCors(options =>
+// {
+//     options.AddPolicy("AllowVite",
+//         builder => builder
+//             .WithOrigins("http://localhost:5173", "http://localhost:5174")
+//             .AllowAnyMethod()
+//             .AllowAnyHeader());
+// });
 
 var app = builder.Build();
 
@@ -35,7 +38,7 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
-app.UseCors("AllowVite");
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 
