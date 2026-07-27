@@ -3,6 +3,7 @@ using ProyectoApi.Services.Songs;
 using ProyectoApi.Services.Checkout;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddControllers();
 
 
 var app = builder.Build();
+
+StripeConfiguration.ApiKey = app.Configuration.GetValue<string>("Stripe:SecretKey") ?? "sk_test_placeholder";
 
 if (app.Environment.IsDevelopment())
 {
