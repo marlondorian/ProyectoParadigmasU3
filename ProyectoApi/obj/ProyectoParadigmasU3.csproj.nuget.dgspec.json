@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/marlon/Documents/projects/ProyectoParadigmasU3/ProyectoParadigmasU3.csproj": {}
+    "/Users/marlon/Documents/projects/ProyectoParadigmasU3/ProyectoApi/ProyectoParadigmasU3.csproj": {}
   },
   "projects": {
-    "/Users/marlon/Documents/projects/ProyectoParadigmasU3/ProyectoParadigmasU3.csproj": {
+    "/Users/marlon/Documents/projects/ProyectoParadigmasU3/ProyectoApi/ProyectoParadigmasU3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/marlon/Documents/projects/ProyectoParadigmasU3/ProyectoParadigmasU3.csproj",
+        "projectUniqueName": "/Users/marlon/Documents/projects/ProyectoParadigmasU3/ProyectoApi/ProyectoParadigmasU3.csproj",
         "projectName": "ProyectoParadigmasU3",
-        "projectPath": "/Users/marlon/Documents/projects/ProyectoParadigmasU3/ProyectoParadigmasU3.csproj",
+        "projectPath": "/Users/marlon/Documents/projects/ProyectoParadigmasU3/ProyectoApi/ProyectoParadigmasU3.csproj",
         "packagesPath": "/Users/marlon/.nuget/packages/",
-        "outputPath": "/Users/marlon/Documents/projects/ProyectoParadigmasU3/obj/",
+        "outputPath": "/Users/marlon/Documents/projects/ProyectoParadigmasU3/ProyectoApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/marlon/.nuget/NuGet/NuGet.Config"
@@ -46,7 +46,25 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[10.0.1, )"
+              "version": "[10.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.16.16, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[52.1.1, )"
             }
           },
           "imports": [
